@@ -185,6 +185,7 @@ case class MahaRequestLogHelper(mahaRequestContext: MahaRequestContext, mahaRequ
       protoBuilder.addFactCostBuilder().build()
       protoBuilder.setFactCost(0,MahaRequestProto.FactCost.newBuilder().setEngine(engineEnum).setCost(factBestCandidateOption.get.factCost))
     }
+
     if (model.queryGrain.isDefined) {
       protoBuilder.setTimeGrain(model.queryGrain.toString)
     }
